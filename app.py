@@ -3,17 +3,16 @@ import json
 
 url = "http://localhost:11434/api/generate"
 
-headers = {
-  "Content-Type": "application/json"
-}
+# headers = {
+#   "Content-Type": "application/json"
+# }
 
 data = {
   "model": "llama3.2",
-  "prompt": "Why is the sky blue?",
-  "stream": false
+  "prompt": "Why is the sky blue?"
 }
 
-response = requests.post(url, headers=headers, data=json.dumps(data))
+response = requests.post(url, json=data, stream=False)
 
 if response.status_code == 200:
   print("Generated text:", end="", flush=True)
@@ -28,5 +27,3 @@ if response.status_code == 200:
       print(generated_text, end="", flush=True)
 else:
   print("Request failed with status code:", response.status_code, response.text)
-
-print(response.json())
