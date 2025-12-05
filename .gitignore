@@ -16,3 +16,6 @@ chroma_db/
 
 # ignore the db folder
 db/
+
+# ignore .github folder
+.github/
