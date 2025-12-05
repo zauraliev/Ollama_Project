@@ -4,7 +4,7 @@ import json
 url = "http://localhost:11434/api/generate"
 
 data = {
-  "model": "llama3.2",
+  "model": "olio",
   "prompt": "Why is the sky blue?"
 }
 
