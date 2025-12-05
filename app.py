@@ -3,10 +3,6 @@ import json
 
 url = "http://localhost:11434/api/generate"
 
-# headers = {
-#   "Content-Type": "application/json"
-# }
-
 data = {
   "model": "llama3.2",
   "prompt": "Why is the sky blue?"
